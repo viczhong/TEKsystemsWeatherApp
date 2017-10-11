@@ -17,6 +17,10 @@
 		9E776DCA1F8EB3B000C84F2E /* TEKsystemsWeatherAppNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E776DC91F8EB3B000C84F2E /* TEKsystemsWeatherAppNetworkingTests.swift */; };
 		9E776DD21F8EB9F300C84F2E /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E776DD11F8EB9F300C84F2E /* WeatherViewController.swift */; };
 		9E776DD41F8EBA1F00C84F2E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E776DD31F8EBA1F00C84F2E /* SettingsViewController.swift */; };
+		9ED481BF1F8ED7C300847F48 /* TEKsystemsWeatherAppFakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED481BE1F8ED7C300847F48 /* TEKsystemsWeatherAppFakeTests.swift */; };
+		9ED481C71F8ED8A000847F48 /* weather.json in Resources */ = {isa = PBXBuildFile; fileRef = 9ED481C61F8ED8A000847F48 /* weather.json */; };
+		C3539ACC0323D8F9C8DCFFBE /* Pods_TEKsystemsWeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23656996D967AA9E4B926B9 /* Pods_TEKsystemsWeatherApp.framework */; };
+		CE87A4B456650FC95ECCFEBF /* Pods_TEKsystemsWeatherAppNetworkingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D510588F7E55FF6FE1938C32 /* Pods_TEKsystemsWeatherAppNetworkingTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,9 +31,19 @@
 			remoteGlobalIDString = 9E13FD951F8C8B9F00E7B2D8;
 			remoteInfo = TEKsystemsWeatherApp;
 		};
+		9ED481C11F8ED7C300847F48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E13FD8E1F8C8B9F00E7B2D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E13FD951F8C8B9F00E7B2D8;
+			remoteInfo = TEKsystemsWeatherApp;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00355EBD0A599480F0116C84 /* Pods-TEKsystemsWeatherAppNetworkingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TEKsystemsWeatherAppNetworkingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TEKsystemsWeatherAppNetworkingTests/Pods-TEKsystemsWeatherAppNetworkingTests.release.xcconfig"; sourceTree = "<group>"; };
+		6A519BB8ACC77462681E6DEE /* Pods-TEKsystemsWeatherAppNetworkingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TEKsystemsWeatherAppNetworkingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TEKsystemsWeatherAppNetworkingTests/Pods-TEKsystemsWeatherAppNetworkingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8811A9937D9C1D7BD07B16B0 /* Pods-TEKsystemsWeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TEKsystemsWeatherApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TEKsystemsWeatherApp/Pods-TEKsystemsWeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
 		9E13FD961F8C8B9F00E7B2D8 /* TEKsystemsWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEKsystemsWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E13FD991F8C8B9F00E7B2D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E13FD9E1F8C8B9F00E7B2D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -44,6 +58,15 @@
 		9E776DCB1F8EB3B000C84F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E776DD11F8EB9F300C84F2E /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		9E776DD31F8EBA1F00C84F2E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		9ED481AE1F8ED5B200847F48 /* TEKsystemsWeatherAppFakeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEKsystemsWeatherAppFakeTests.swift; sourceTree = "<group>"; };
+		9ED481B01F8ED5B200847F48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9ED481BC1F8ED7C300847F48 /* TEKsystemsWeatherAppFakeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TEKsystemsWeatherAppFakeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ED481BE1F8ED7C300847F48 /* TEKsystemsWeatherAppFakeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEKsystemsWeatherAppFakeTests.swift; sourceTree = "<group>"; };
+		9ED481C01F8ED7C300847F48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9ED481C61F8ED8A000847F48 /* weather.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weather.json; sourceTree = "<group>"; };
+		A64D1D556C3B31BBDE6E1BE0 /* Pods-TEKsystemsWeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TEKsystemsWeatherApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TEKsystemsWeatherApp/Pods-TEKsystemsWeatherApp.release.xcconfig"; sourceTree = "<group>"; };
+		D510588F7E55FF6FE1938C32 /* Pods_TEKsystemsWeatherAppNetworkingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TEKsystemsWeatherAppNetworkingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E23656996D967AA9E4B926B9 /* Pods_TEKsystemsWeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TEKsystemsWeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +74,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3539ACC0323D8F9C8DCFFBE /* Pods_TEKsystemsWeatherApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9E776DC41F8EB3B000C84F2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE87A4B456650FC95ECCFEBF /* Pods_TEKsystemsWeatherAppNetworkingTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9ED481B91F8ED7C300847F48 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -64,12 +96,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9CA7290BFABB9218D3A8332B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8811A9937D9C1D7BD07B16B0 /* Pods-TEKsystemsWeatherApp.debug.xcconfig */,
+				A64D1D556C3B31BBDE6E1BE0 /* Pods-TEKsystemsWeatherApp.release.xcconfig */,
+				6A519BB8ACC77462681E6DEE /* Pods-TEKsystemsWeatherAppNetworkingTests.debug.xcconfig */,
+				00355EBD0A599480F0116C84 /* Pods-TEKsystemsWeatherAppNetworkingTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9E13FD8D1F8C8B9F00E7B2D8 = {
 			isa = PBXGroup;
 			children = (
 				9E13FD981F8C8B9F00E7B2D8 /* TEKsystemsWeatherApp */,
 				9E776DC81F8EB3B000C84F2E /* TEKsystemsWeatherAppNetworkingTests */,
+				9ED481AD1F8ED5B200847F48 /* TEKsystemsWeatherAppFakeTests */,
+				9ED481BD1F8ED7C300847F48 /* TEKsystemsWeatherAppFakeTests */,
 				9E13FD971F8C8B9F00E7B2D8 /* Products */,
+				9CA7290BFABB9218D3A8332B /* Pods */,
+				DA043C38204B8C277B82A41D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +125,7 @@
 			children = (
 				9E13FD961F8C8B9F00E7B2D8 /* TEKsystemsWeatherApp.app */,
 				9E776DC71F8EB3B000C84F2E /* TEKsystemsWeatherAppNetworkingTests.xctest */,
+				9ED481BC1F8ED7C300847F48 /* TEKsystemsWeatherAppFakeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,6 +188,34 @@
 			path = TEKsystemsWeatherAppNetworkingTests;
 			sourceTree = "<group>";
 		};
+		9ED481AD1F8ED5B200847F48 /* TEKsystemsWeatherAppFakeTests */ = {
+			isa = PBXGroup;
+			children = (
+				9ED481C61F8ED8A000847F48 /* weather.json */,
+				9ED481AE1F8ED5B200847F48 /* TEKsystemsWeatherAppFakeTests.swift */,
+				9ED481B01F8ED5B200847F48 /* Info.plist */,
+			);
+			path = TEKsystemsWeatherAppFakeTests;
+			sourceTree = "<group>";
+		};
+		9ED481BD1F8ED7C300847F48 /* TEKsystemsWeatherAppFakeTests */ = {
+			isa = PBXGroup;
+			children = (
+				9ED481BE1F8ED7C300847F48 /* TEKsystemsWeatherAppFakeTests.swift */,
+				9ED481C01F8ED7C300847F48 /* Info.plist */,
+			);
+			path = TEKsystemsWeatherAppFakeTests;
+			sourceTree = "<group>";
+		};
+		DA043C38204B8C277B82A41D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E23656996D967AA9E4B926B9 /* Pods_TEKsystemsWeatherApp.framework */,
+				D510588F7E55FF6FE1938C32 /* Pods_TEKsystemsWeatherAppNetworkingTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +223,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9E13FDBE1F8C8B9F00E7B2D8 /* Build configuration list for PBXNativeTarget "TEKsystemsWeatherApp" */;
 			buildPhases = (
+				6D330C6E548E517EEF189FC6 /* [CP] Check Pods Manifest.lock */,
 				9E13FD921F8C8B9F00E7B2D8 /* Sources */,
 				9E13FD931F8C8B9F00E7B2D8 /* Frameworks */,
 				9E13FD941F8C8B9F00E7B2D8 /* Resources */,
+				88140C0A50918AF112E0474C /* [CP] Embed Pods Frameworks */,
+				083AD9EB95BAA39E0A173C99 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,9 +243,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9E776DCE1F8EB3B000C84F2E /* Build configuration list for PBXNativeTarget "TEKsystemsWeatherAppNetworkingTests" */;
 			buildPhases = (
+				F402EF90C0A188E4052A76B5 /* [CP] Check Pods Manifest.lock */,
 				9E776DC31F8EB3B000C84F2E /* Sources */,
 				9E776DC41F8EB3B000C84F2E /* Frameworks */,
 				9E776DC51F8EB3B000C84F2E /* Resources */,
+				08B0B9A34F2A267D03F14B11 /* [CP] Embed Pods Frameworks */,
+				E86191A9C6E47EFC501886E6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,6 +258,24 @@
 			name = TEKsystemsWeatherAppNetworkingTests;
 			productName = TEKsystemsWeatherAppNetworkingTests;
 			productReference = 9E776DC71F8EB3B000C84F2E /* TEKsystemsWeatherAppNetworkingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9ED481BB1F8ED7C300847F48 /* TEKsystemsWeatherAppFakeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9ED481C31F8ED7C300847F48 /* Build configuration list for PBXNativeTarget "TEKsystemsWeatherAppFakeTests" */;
+			buildPhases = (
+				9ED481B81F8ED7C300847F48 /* Sources */,
+				9ED481B91F8ED7C300847F48 /* Frameworks */,
+				9ED481BA1F8ED7C300847F48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9ED481C21F8ED7C300847F48 /* PBXTargetDependency */,
+			);
+			name = TEKsystemsWeatherAppFakeTests;
+			productName = TEKsystemsWeatherAppFakeTests;
+			productReference = 9ED481BC1F8ED7C300847F48 /* TEKsystemsWeatherAppFakeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -197,6 +297,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 9E13FD951F8C8B9F00E7B2D8;
 					};
+					9ED481BB1F8ED7C300847F48 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9E13FD951F8C8B9F00E7B2D8;
+					};
 				};
 			};
 			buildConfigurationList = 9E13FD911F8C8B9F00E7B2D8 /* Build configuration list for PBXProject "TEKsystemsWeatherApp" */;
@@ -214,6 +319,7 @@
 			targets = (
 				9E13FD951F8C8B9F00E7B2D8 /* TEKsystemsWeatherApp */,
 				9E776DC61F8EB3B000C84F2E /* TEKsystemsWeatherAppNetworkingTests */,
+				9ED481BB1F8ED7C300847F48 /* TEKsystemsWeatherAppFakeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -236,7 +342,117 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9ED481BA1F8ED7C300847F48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9ED481C71F8ED8A000847F48 /* weather.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		083AD9EB95BAA39E0A173C99 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TEKsystemsWeatherApp/Pods-TEKsystemsWeatherApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		08B0B9A34F2A267D03F14B11 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TEKsystemsWeatherAppNetworkingTests/Pods-TEKsystemsWeatherAppNetworkingTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D330C6E548E517EEF189FC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TEKsystemsWeatherApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88140C0A50918AF112E0474C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TEKsystemsWeatherApp/Pods-TEKsystemsWeatherApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TEKsystemsWeatherApp/Pods-TEKsystemsWeatherApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E86191A9C6E47EFC501886E6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TEKsystemsWeatherAppNetworkingTests/Pods-TEKsystemsWeatherAppNetworkingTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F402EF90C0A188E4052A76B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TEKsystemsWeatherAppNetworkingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9E13FD921F8C8B9F00E7B2D8 /* Sources */ = {
@@ -260,6 +476,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9ED481B81F8ED7C300847F48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9ED481BF1F8ED7C300847F48 /* TEKsystemsWeatherAppFakeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -267,6 +491,11 @@
 			isa = PBXTargetDependency;
 			target = 9E13FD951F8C8B9F00E7B2D8 /* TEKsystemsWeatherApp */;
 			targetProxy = 9E776DCC1F8EB3B000C84F2E /* PBXContainerItemProxy */;
+		};
+		9ED481C21F8ED7C300847F48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9E13FD951F8C8B9F00E7B2D8 /* TEKsystemsWeatherApp */;
+			targetProxy = 9ED481C11F8ED7C300847F48 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -399,6 +628,7 @@
 		};
 		9E13FDBF1F8C8B9F00E7B2D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8811A9937D9C1D7BD07B16B0 /* Pods-TEKsystemsWeatherApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -414,6 +644,7 @@
 		};
 		9E13FDC01F8C8B9F00E7B2D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A64D1D556C3B31BBDE6E1BE0 /* Pods-TEKsystemsWeatherApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -429,6 +660,7 @@
 		};
 		9E776DCF1F8EB3B000C84F2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A519BB8ACC77462681E6DEE /* Pods-TEKsystemsWeatherAppNetworkingTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -445,6 +677,7 @@
 		};
 		9E776DD01F8EB3B000C84F2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00355EBD0A599480F0116C84 /* Pods-TEKsystemsWeatherAppNetworkingTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -452,6 +685,38 @@
 				INFOPLIST_FILE = TEKsystemsWeatherAppNetworkingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.viczhong.TEKsystemsWeatherAppNetworkingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TEKsystemsWeatherApp.app/TEKsystemsWeatherApp";
+			};
+			name = Release;
+		};
+		9ED481C41F8ED7C300847F48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RKDEZ4QK32;
+				INFOPLIST_FILE = TEKsystemsWeatherAppFakeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.viczhong.TEKsystemsWeatherAppFakeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TEKsystemsWeatherApp.app/TEKsystemsWeatherApp";
+			};
+			name = Debug;
+		};
+		9ED481C51F8ED7C300847F48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RKDEZ4QK32;
+				INFOPLIST_FILE = TEKsystemsWeatherAppFakeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.viczhong.TEKsystemsWeatherAppFakeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -485,6 +750,15 @@
 			buildConfigurations = (
 				9E776DCF1F8EB3B000C84F2E /* Debug */,
 				9E776DD01F8EB3B000C84F2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9ED481C31F8ED7C300847F48 /* Build configuration list for PBXNativeTarget "TEKsystemsWeatherAppFakeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9ED481C41F8ED7C300847F48 /* Debug */,
+				9ED481C51F8ED7C300847F48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

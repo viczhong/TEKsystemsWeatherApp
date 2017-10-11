@@ -11,7 +11,7 @@ import XCTest
 
 class TEKsystemsWeatherAppNetworkingTests: XCTestCase {
     var sessionUnderTest: URLSession!
-
+    
     override func setUp() {
         super.setUp()
         sessionUnderTest = .shared
@@ -29,7 +29,7 @@ class TEKsystemsWeatherAppNetworkingTests: XCTestCase {
         let promise = expectation(description: "Completion handler invoked")
         var statusCode: Int?
         var responseError: Error?
-
+        
         // when
         let dataTask = sessionUnderTest.dataTask(with: url!) { data, response, error in
             statusCode = (response as? HTTPURLResponse)?.statusCode
@@ -38,7 +38,7 @@ class TEKsystemsWeatherAppNetworkingTests: XCTestCase {
         }
         dataTask.resume()
         waitForExpectations(timeout: 5, handler: nil)
-
+        
         // then
         XCTAssertNil(responseError)
         XCTAssertEqual(statusCode, 200)

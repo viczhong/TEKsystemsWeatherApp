@@ -25,12 +25,22 @@
                                     <constraint firstAttribute="width" secondItem="pls-4h-SdS" secondAttribute="height" multiplier="1:1" id="PgY-Sd-flu"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Condition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fA0-Kl-FiP">
+                                <rect key="frame" x="8" y="275" width="359" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="fA0-Kl-FiP" firstAttribute="centerX" secondItem="pls-4h-SdS" secondAttribute="centerX" id="6kh-Ff-7ea"/>
                             <constraint firstItem="pls-4h-SdS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="HVm-K7-flh"/>
                             <constraint firstItem="pls-4h-SdS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="Hxh-ZG-RnR"/>
+                            <constraint firstItem="fA0-Kl-FiP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="NCQ-Zl-xys"/>
+                            <constraint firstItem="fA0-Kl-FiP" firstAttribute="top" secondItem="pls-4h-SdS" secondAttribute="bottom" constant="7.5" id="Y9K-kD-loi"/>
                             <constraint firstItem="pls-4h-SdS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hTM-YN-9qM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fA0-Kl-FiP" secondAttribute="trailing" constant="8" id="zj7-MG-Wrp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -41,6 +51,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="weatherConditionLabel" destination="fA0-Kl-FiP" id="PSP-o7-kny"/>
+                        <outlet property="weatherImageView" destination="pls-4h-SdS" id="8Vy-45-4Df"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
