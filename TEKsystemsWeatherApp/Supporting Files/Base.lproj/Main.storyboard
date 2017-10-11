@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FzU-rb-RPd">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,17 +16,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="TEKsystemsWeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pls-4h-SdS">
-                                <rect key="frame" x="93.5" y="80" width="187.5" height="187.5"/>
+                                <rect key="frame" x="103.66666666666669" y="80" width="207" height="207.66666666666669"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pls-4h-SdS" secondAttribute="height" multiplier="1:1" id="PgY-Sd-flu"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Condition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fA0-Kl-FiP">
-                                <rect key="frame" x="8" y="275" width="359" height="21"/>
+                                <rect key="frame" x="8" y="295" width="398" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -65,15 +65,80 @@
             <objects>
                 <viewController id="Cqr-UC-8pM" customClass="SettingsViewController" customModule="TEKsystemsWeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KbM-a4-f3v">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuZ-lZ-raU">
+                                <rect key="frame" x="8" y="133.66666666666663" width="398" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New York, NY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Arh-wE-9Gw">
+                                <rect key="frame" x="62" y="170" width="290" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature Scale: Fahrenheit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tf7-rg-VMX">
+                                <rect key="frame" x="8" y="280" width="398" height="20.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="P5p-ui-hJ3">
+                                <rect key="frame" x="128.66666666666669" y="316.66666666666669" width="157.00000000000006" height="29"/>
+                                <segments>
+                                    <segment title="Fahrenheit"/>
+                                    <segment title="Celcius"/>
+                                </segments>
+                                <connections>
+                                    <action selector="tempScaleSegmentControlTapped:" destination="Cqr-UC-8pM" eventType="valueChanged" id="rho-S0-HnF"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Nq-hh-0ts">
+                                <rect key="frame" x="189" y="606" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="applyButtonTapped:" destination="Cqr-UC-8pM" eventType="touchUpInside" id="gFw-Mp-UPV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0J-fW-mt5">
+                                <rect key="frame" x="157" y="36" width="100" height="33.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IpI-rw-LzG" firstAttribute="trailing" secondItem="Tf7-rg-VMX" secondAttribute="trailing" constant="8" id="3XN-7X-MT4"/>
+                            <constraint firstItem="fuZ-lZ-raU" firstAttribute="top" secondItem="K0J-fW-mt5" secondAttribute="bottom" constant="64" id="5p2-zD-IFt"/>
+                            <constraint firstItem="Tf7-rg-VMX" firstAttribute="top" secondItem="Arh-wE-9Gw" secondAttribute="bottom" constant="80" id="7KH-b5-dqq"/>
+                            <constraint firstItem="Arh-wE-9Gw" firstAttribute="centerX" secondItem="KbM-a4-f3v" secondAttribute="centerX" id="BaY-SS-gc2"/>
+                            <constraint firstItem="K0J-fW-mt5" firstAttribute="centerX" secondItem="KbM-a4-f3v" secondAttribute="centerX" id="FKo-GL-ynh"/>
+                            <constraint firstItem="P5p-ui-hJ3" firstAttribute="top" secondItem="Tf7-rg-VMX" secondAttribute="bottom" constant="16" id="TVR-e0-7Hx"/>
+                            <constraint firstItem="K0J-fW-mt5" firstAttribute="top" secondItem="IpI-rw-LzG" secondAttribute="top" constant="16" id="U71-9d-jSG"/>
+                            <constraint firstItem="fuZ-lZ-raU" firstAttribute="leading" secondItem="IpI-rw-LzG" secondAttribute="leading" constant="8" id="YWW-W3-45H"/>
+                            <constraint firstItem="P5p-ui-hJ3" firstAttribute="centerX" secondItem="KbM-a4-f3v" secondAttribute="centerX" id="bFN-Pm-3NX"/>
+                            <constraint firstItem="IpI-rw-LzG" firstAttribute="bottom" secondItem="8Nq-hh-0ts" secondAttribute="bottom" constant="100" id="fbU-7Z-XzD"/>
+                            <constraint firstItem="8Nq-hh-0ts" firstAttribute="centerX" secondItem="KbM-a4-f3v" secondAttribute="centerX" id="jAc-4l-jTE"/>
+                            <constraint firstItem="Arh-wE-9Gw" firstAttribute="top" secondItem="fuZ-lZ-raU" secondAttribute="bottom" constant="16" id="kNU-wm-3Gp"/>
+                            <constraint firstItem="Tf7-rg-VMX" firstAttribute="leading" secondItem="IpI-rw-LzG" secondAttribute="leading" constant="8" id="moh-8b-Aey"/>
+                            <constraint firstItem="IpI-rw-LzG" firstAttribute="trailing" secondItem="fuZ-lZ-raU" secondAttribute="trailing" constant="8" id="wnp-Rv-0wm"/>
+                            <constraint firstItem="Arh-wE-9Gw" firstAttribute="width" secondItem="KbM-a4-f3v" secondAttribute="width" multiplier="0.7" id="zxm-Mv-Kio"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="IpI-rw-LzG"/>
                     </view>
+                    <connections>
+                        <outlet property="locationTextField" destination="Arh-wE-9Gw" id="GOa-qE-av0"/>
+                        <outlet property="tempScaleSegmentControl" destination="P5p-ui-hJ3" id="TFE-Q0-da6"/>
+                        <outlet property="tempScaleTextLabel" destination="Tf7-rg-VMX" id="VgH-cg-Izb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KZ2-aP-Vhc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1239" y="117"/>
+            <point key="canvasLocation" x="1237.5999999999999" y="116.49175412293854"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uQo-5P-wEV">
@@ -81,7 +146,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FzU-rb-RPd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sw4-yW-MH3">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
