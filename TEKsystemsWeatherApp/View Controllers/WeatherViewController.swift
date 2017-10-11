@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class WeatherViewController: UIViewController {
     // MARK: Properties and Outlets
@@ -29,8 +30,11 @@ class WeatherViewController: UIViewController {
     func updateWeather() {
         if let weather = weather {
             self.title = weather.cityName
+            self.location = weather.cityName
             self.weatherConditionLabel.text = weather.description
 
+            let url = URL(string: "http://openweathermap.org/img/w/\(weather.icon).png")!
+            weatherImageView.kf.setImage(with: url, placeholder: UIImage(named: "placeholder"))
         }
     }
     
@@ -48,11 +52,12 @@ class WeatherViewController: UIViewController {
     }
     
     // MARK: - Navigation
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segueIdentifier {
             let vc = segue.destination as! SettingsViewController
             vc.delegate = self
+            vc.locationString = location
+            vc.tempScale = tempScale
         }
     }
     
