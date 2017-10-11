@@ -15,6 +15,8 @@
 		9E13FDCE1F8C906600E7B2D8 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E13FDCD1F8C906600E7B2D8 /* Weather.swift */; };
 		9E776DA31F8EB01C00C84F2E /* DHURLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E776DA21F8EB01C00C84F2E /* DHURLSessionMock.swift */; };
 		9E776DCA1F8EB3B000C84F2E /* TEKsystemsWeatherAppNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E776DC91F8EB3B000C84F2E /* TEKsystemsWeatherAppNetworkingTests.swift */; };
+		9E776DD21F8EB9F300C84F2E /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E776DD11F8EB9F300C84F2E /* WeatherViewController.swift */; };
+		9E776DD41F8EBA1F00C84F2E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E776DD31F8EBA1F00C84F2E /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		9E776DC71F8EB3B000C84F2E /* TEKsystemsWeatherAppNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TEKsystemsWeatherAppNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E776DC91F8EB3B000C84F2E /* TEKsystemsWeatherAppNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEKsystemsWeatherAppNetworkingTests.swift; sourceTree = "<group>"; };
 		9E776DCB1F8EB3B000C84F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E776DD11F8EB9F300C84F2E /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		9E776DD31F8EBA1F00C84F2E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 		9E13FDC81F8C8FC000E7B2D8 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9E776DD11F8EB9F300C84F2E /* WeatherViewController.swift */,
+				9E776DD31F8EBA1F00C84F2E /* SettingsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -238,9 +244,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E13FDCC1F8C900B00E7B2D8 /* APIRequestManager.swift in Sources */,
+				9E776DD21F8EB9F300C84F2E /* WeatherViewController.swift in Sources */,
 				9E13FDCE1F8C906600E7B2D8 /* Weather.swift in Sources */,
 				9E776DA31F8EB01C00C84F2E /* DHURLSessionMock.swift in Sources */,
 				9E13FD9A1F8C8B9F00E7B2D8 /* AppDelegate.swift in Sources */,
+				9E776DD41F8EBA1F00C84F2E /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
