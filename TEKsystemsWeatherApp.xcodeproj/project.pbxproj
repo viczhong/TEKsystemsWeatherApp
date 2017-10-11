@@ -8,23 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		9E13FD9A1F8C8B9F00E7B2D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E13FD991F8C8B9F00E7B2D8 /* AppDelegate.swift */; };
-		9E13FD9C1F8C8B9F00E7B2D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E13FD9B1F8C8B9F00E7B2D8 /* ViewController.swift */; };
 		9E13FD9F1F8C8B9F00E7B2D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E13FD9D1F8C8B9F00E7B2D8 /* Main.storyboard */; };
 		9E13FDA11F8C8B9F00E7B2D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E13FDA01F8C8B9F00E7B2D8 /* Assets.xcassets */; };
 		9E13FDA41F8C8B9F00E7B2D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E13FDA21F8C8B9F00E7B2D8 /* LaunchScreen.storyboard */; };
-		9E13FDAF1F8C8B9F00E7B2D8 /* TEKsystemsWeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E13FDAE1F8C8B9F00E7B2D8 /* TEKsystemsWeatherAppTests.swift */; };
-		9E13FDBA1F8C8B9F00E7B2D8 /* TEKsystemsWeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E13FDB91F8C8B9F00E7B2D8 /* TEKsystemsWeatherAppUITests.swift */; };
+		9E13FDCC1F8C900B00E7B2D8 /* APIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E13FDCB1F8C900B00E7B2D8 /* APIRequestManager.swift */; };
+		9E13FDCE1F8C906600E7B2D8 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E13FDCD1F8C906600E7B2D8 /* Weather.swift */; };
+		9E776DA31F8EB01C00C84F2E /* DHURLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E776DA21F8EB01C00C84F2E /* DHURLSessionMock.swift */; };
+		9E776DCA1F8EB3B000C84F2E /* TEKsystemsWeatherAppNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E776DC91F8EB3B000C84F2E /* TEKsystemsWeatherAppNetworkingTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9E13FDAB1F8C8B9F00E7B2D8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9E13FD8E1F8C8B9F00E7B2D8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9E13FD951F8C8B9F00E7B2D8;
-			remoteInfo = TEKsystemsWeatherApp;
-		};
-		9E13FDB61F8C8B9F00E7B2D8 /* PBXContainerItemProxy */ = {
+		9E776DCC1F8EB3B000C84F2E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9E13FD8E1F8C8B9F00E7B2D8 /* Project object */;
 			proxyType = 1;
@@ -36,17 +30,16 @@
 /* Begin PBXFileReference section */
 		9E13FD961F8C8B9F00E7B2D8 /* TEKsystemsWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEKsystemsWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E13FD991F8C8B9F00E7B2D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9E13FD9B1F8C8B9F00E7B2D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9E13FD9E1F8C8B9F00E7B2D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E13FDA01F8C8B9F00E7B2D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E13FDA31F8C8B9F00E7B2D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E13FDA51F8C8B9F00E7B2D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9E13FDAA1F8C8B9F00E7B2D8 /* TEKsystemsWeatherAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TEKsystemsWeatherAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E13FDAE1F8C8B9F00E7B2D8 /* TEKsystemsWeatherAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEKsystemsWeatherAppTests.swift; sourceTree = "<group>"; };
-		9E13FDB01F8C8B9F00E7B2D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9E13FDB51F8C8B9F00E7B2D8 /* TEKsystemsWeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TEKsystemsWeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E13FDB91F8C8B9F00E7B2D8 /* TEKsystemsWeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEKsystemsWeatherAppUITests.swift; sourceTree = "<group>"; };
-		9E13FDBB1F8C8B9F00E7B2D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E13FDCB1F8C900B00E7B2D8 /* APIRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestManager.swift; sourceTree = "<group>"; };
+		9E13FDCD1F8C906600E7B2D8 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		9E776DA21F8EB01C00C84F2E /* DHURLSessionMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHURLSessionMock.swift; sourceTree = "<group>"; };
+		9E776DC71F8EB3B000C84F2E /* TEKsystemsWeatherAppNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TEKsystemsWeatherAppNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E776DC91F8EB3B000C84F2E /* TEKsystemsWeatherAppNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEKsystemsWeatherAppNetworkingTests.swift; sourceTree = "<group>"; };
+		9E776DCB1F8EB3B000C84F2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +50,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9E13FDA71F8C8B9F00E7B2D8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9E13FDB21F8C8B9F00E7B2D8 /* Frameworks */ = {
+		9E776DC41F8EB3B000C84F2E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -78,8 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				9E13FD981F8C8B9F00E7B2D8 /* TEKsystemsWeatherApp */,
-				9E13FDAD1F8C8B9F00E7B2D8 /* TEKsystemsWeatherAppTests */,
-				9E13FDB81F8C8B9F00E7B2D8 /* TEKsystemsWeatherAppUITests */,
+				9E776DC81F8EB3B000C84F2E /* TEKsystemsWeatherAppNetworkingTests */,
 				9E13FD971F8C8B9F00E7B2D8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				9E13FD961F8C8B9F00E7B2D8 /* TEKsystemsWeatherApp.app */,
-				9E13FDAA1F8C8B9F00E7B2D8 /* TEKsystemsWeatherAppTests.xctest */,
-				9E13FDB51F8C8B9F00E7B2D8 /* TEKsystemsWeatherAppUITests.xctest */,
+				9E776DC71F8EB3B000C84F2E /* TEKsystemsWeatherAppNetworkingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,32 +81,57 @@
 		9E13FD981F8C8B9F00E7B2D8 /* TEKsystemsWeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				9E13FD991F8C8B9F00E7B2D8 /* AppDelegate.swift */,
-				9E13FD9B1F8C8B9F00E7B2D8 /* ViewController.swift */,
-				9E13FD9D1F8C8B9F00E7B2D8 /* Main.storyboard */,
-				9E13FDA01F8C8B9F00E7B2D8 /* Assets.xcassets */,
-				9E13FDA21F8C8B9F00E7B2D8 /* LaunchScreen.storyboard */,
-				9E13FDA51F8C8B9F00E7B2D8 /* Info.plist */,
+				9E13FDC71F8C8FB800E7B2D8 /* Managers */,
+				9E13FDC91F8C8FC700E7B2D8 /* Models */,
+				9E13FDCA1F8C8FCB00E7B2D8 /* Supporting Files */,
+				9E13FDC81F8C8FC000E7B2D8 /* View Controllers */,
 			);
 			path = TEKsystemsWeatherApp;
 			sourceTree = "<group>";
 		};
-		9E13FDAD1F8C8B9F00E7B2D8 /* TEKsystemsWeatherAppTests */ = {
+		9E13FDC71F8C8FB800E7B2D8 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				9E13FDAE1F8C8B9F00E7B2D8 /* TEKsystemsWeatherAppTests.swift */,
-				9E13FDB01F8C8B9F00E7B2D8 /* Info.plist */,
+				9E13FDCB1F8C900B00E7B2D8 /* APIRequestManager.swift */,
 			);
-			path = TEKsystemsWeatherAppTests;
+			path = Managers;
 			sourceTree = "<group>";
 		};
-		9E13FDB81F8C8B9F00E7B2D8 /* TEKsystemsWeatherAppUITests */ = {
+		9E13FDC81F8C8FC000E7B2D8 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9E13FDB91F8C8B9F00E7B2D8 /* TEKsystemsWeatherAppUITests.swift */,
-				9E13FDBB1F8C8B9F00E7B2D8 /* Info.plist */,
 			);
-			path = TEKsystemsWeatherAppUITests;
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9E13FDC91F8C8FC700E7B2D8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9E13FDCD1F8C906600E7B2D8 /* Weather.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9E13FDCA1F8C8FCB00E7B2D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9E13FD991F8C8B9F00E7B2D8 /* AppDelegate.swift */,
+				9E13FDA01F8C8B9F00E7B2D8 /* Assets.xcassets */,
+				9E776DA21F8EB01C00C84F2E /* DHURLSessionMock.swift */,
+				9E13FDA51F8C8B9F00E7B2D8 /* Info.plist */,
+				9E13FDA21F8C8B9F00E7B2D8 /* LaunchScreen.storyboard */,
+				9E13FD9D1F8C8B9F00E7B2D8 /* Main.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9E776DC81F8EB3B000C84F2E /* TEKsystemsWeatherAppNetworkingTests */ = {
+			isa = PBXGroup;
+			children = (
+				9E776DC91F8EB3B000C84F2E /* TEKsystemsWeatherAppNetworkingTests.swift */,
+				9E776DCB1F8EB3B000C84F2E /* Info.plist */,
+			);
+			path = TEKsystemsWeatherAppNetworkingTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,41 +154,23 @@
 			productReference = 9E13FD961F8C8B9F00E7B2D8 /* TEKsystemsWeatherApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9E13FDA91F8C8B9F00E7B2D8 /* TEKsystemsWeatherAppTests */ = {
+		9E776DC61F8EB3B000C84F2E /* TEKsystemsWeatherAppNetworkingTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9E13FDC11F8C8B9F00E7B2D8 /* Build configuration list for PBXNativeTarget "TEKsystemsWeatherAppTests" */;
+			buildConfigurationList = 9E776DCE1F8EB3B000C84F2E /* Build configuration list for PBXNativeTarget "TEKsystemsWeatherAppNetworkingTests" */;
 			buildPhases = (
-				9E13FDA61F8C8B9F00E7B2D8 /* Sources */,
-				9E13FDA71F8C8B9F00E7B2D8 /* Frameworks */,
-				9E13FDA81F8C8B9F00E7B2D8 /* Resources */,
+				9E776DC31F8EB3B000C84F2E /* Sources */,
+				9E776DC41F8EB3B000C84F2E /* Frameworks */,
+				9E776DC51F8EB3B000C84F2E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9E13FDAC1F8C8B9F00E7B2D8 /* PBXTargetDependency */,
+				9E776DCD1F8EB3B000C84F2E /* PBXTargetDependency */,
 			);
-			name = TEKsystemsWeatherAppTests;
-			productName = TEKsystemsWeatherAppTests;
-			productReference = 9E13FDAA1F8C8B9F00E7B2D8 /* TEKsystemsWeatherAppTests.xctest */;
+			name = TEKsystemsWeatherAppNetworkingTests;
+			productName = TEKsystemsWeatherAppNetworkingTests;
+			productReference = 9E776DC71F8EB3B000C84F2E /* TEKsystemsWeatherAppNetworkingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		9E13FDB41F8C8B9F00E7B2D8 /* TEKsystemsWeatherAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9E13FDC41F8C8B9F00E7B2D8 /* Build configuration list for PBXNativeTarget "TEKsystemsWeatherAppUITests" */;
-			buildPhases = (
-				9E13FDB11F8C8B9F00E7B2D8 /* Sources */,
-				9E13FDB21F8C8B9F00E7B2D8 /* Frameworks */,
-				9E13FDB31F8C8B9F00E7B2D8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9E13FDB71F8C8B9F00E7B2D8 /* PBXTargetDependency */,
-			);
-			name = TEKsystemsWeatherAppUITests;
-			productName = TEKsystemsWeatherAppUITests;
-			productReference = 9E13FDB51F8C8B9F00E7B2D8 /* TEKsystemsWeatherAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -195,12 +186,7 @@
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
-					9E13FDA91F8C8B9F00E7B2D8 = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 9E13FD951F8C8B9F00E7B2D8;
-					};
-					9E13FDB41F8C8B9F00E7B2D8 = {
+					9E776DC61F8EB3B000C84F2E = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 9E13FD951F8C8B9F00E7B2D8;
@@ -221,8 +207,7 @@
 			projectRoot = "";
 			targets = (
 				9E13FD951F8C8B9F00E7B2D8 /* TEKsystemsWeatherApp */,
-				9E13FDA91F8C8B9F00E7B2D8 /* TEKsystemsWeatherAppTests */,
-				9E13FDB41F8C8B9F00E7B2D8 /* TEKsystemsWeatherAppUITests */,
+				9E776DC61F8EB3B000C84F2E /* TEKsystemsWeatherAppNetworkingTests */,
 			);
 		};
 /* End PBXProject section */
@@ -238,14 +223,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9E13FDA81F8C8B9F00E7B2D8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9E13FDB31F8C8B9F00E7B2D8 /* Resources */ = {
+		9E776DC51F8EB3B000C84F2E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -259,39 +237,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E13FD9C1F8C8B9F00E7B2D8 /* ViewController.swift in Sources */,
+				9E13FDCC1F8C900B00E7B2D8 /* APIRequestManager.swift in Sources */,
+				9E13FDCE1F8C906600E7B2D8 /* Weather.swift in Sources */,
+				9E776DA31F8EB01C00C84F2E /* DHURLSessionMock.swift in Sources */,
 				9E13FD9A1F8C8B9F00E7B2D8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9E13FDA61F8C8B9F00E7B2D8 /* Sources */ = {
+		9E776DC31F8EB3B000C84F2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E13FDAF1F8C8B9F00E7B2D8 /* TEKsystemsWeatherAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9E13FDB11F8C8B9F00E7B2D8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9E13FDBA1F8C8B9F00E7B2D8 /* TEKsystemsWeatherAppUITests.swift in Sources */,
+				9E776DCA1F8EB3B000C84F2E /* TEKsystemsWeatherAppNetworkingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9E13FDAC1F8C8B9F00E7B2D8 /* PBXTargetDependency */ = {
+		9E776DCD1F8EB3B000C84F2E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9E13FD951F8C8B9F00E7B2D8 /* TEKsystemsWeatherApp */;
-			targetProxy = 9E13FDAB1F8C8B9F00E7B2D8 /* PBXContainerItemProxy */;
-		};
-		9E13FDB71F8C8B9F00E7B2D8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9E13FD951F8C8B9F00E7B2D8 /* TEKsystemsWeatherApp */;
-			targetProxy = 9E13FDB61F8C8B9F00E7B2D8 /* PBXContainerItemProxy */;
+			targetProxy = 9E776DCC1F8EB3B000C84F2E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -428,7 +395,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RKDEZ4QK32;
-				INFOPLIST_FILE = TEKsystemsWeatherApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TEKsystemsWeatherApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.viczhong.TEKsystemsWeatherApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -443,7 +410,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RKDEZ4QK32;
-				INFOPLIST_FILE = TEKsystemsWeatherApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TEKsystemsWeatherApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.viczhong.TEKsystemsWeatherApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -452,16 +419,15 @@
 			};
 			name = Release;
 		};
-		9E13FDC21F8C8B9F00E7B2D8 /* Debug */ = {
+		9E776DCF1F8EB3B000C84F2E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RKDEZ4QK32;
-				INFOPLIST_FILE = TEKsystemsWeatherAppTests/Info.plist;
+				INFOPLIST_FILE = TEKsystemsWeatherAppNetworkingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.viczhong.TEKsystemsWeatherAppTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.viczhong.TEKsystemsWeatherAppNetworkingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -469,52 +435,19 @@
 			};
 			name = Debug;
 		};
-		9E13FDC31F8C8B9F00E7B2D8 /* Release */ = {
+		9E776DD01F8EB3B000C84F2E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RKDEZ4QK32;
-				INFOPLIST_FILE = TEKsystemsWeatherAppTests/Info.plist;
+				INFOPLIST_FILE = TEKsystemsWeatherAppNetworkingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.viczhong.TEKsystemsWeatherAppTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.viczhong.TEKsystemsWeatherAppNetworkingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TEKsystemsWeatherApp.app/TEKsystemsWeatherApp";
-			};
-			name = Release;
-		};
-		9E13FDC51F8C8B9F00E7B2D8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RKDEZ4QK32;
-				INFOPLIST_FILE = TEKsystemsWeatherAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.viczhong.TEKsystemsWeatherAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TEKsystemsWeatherApp;
-			};
-			name = Debug;
-		};
-		9E13FDC61F8C8B9F00E7B2D8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RKDEZ4QK32;
-				INFOPLIST_FILE = TEKsystemsWeatherAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.viczhong.TEKsystemsWeatherAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TEKsystemsWeatherApp;
 			};
 			name = Release;
 		};
@@ -539,20 +472,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9E13FDC11F8C8B9F00E7B2D8 /* Build configuration list for PBXNativeTarget "TEKsystemsWeatherAppTests" */ = {
+		9E776DCE1F8EB3B000C84F2E /* Build configuration list for PBXNativeTarget "TEKsystemsWeatherAppNetworkingTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9E13FDC21F8C8B9F00E7B2D8 /* Debug */,
-				9E13FDC31F8C8B9F00E7B2D8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9E13FDC41F8C8B9F00E7B2D8 /* Build configuration list for PBXNativeTarget "TEKsystemsWeatherAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9E13FDC51F8C8B9F00E7B2D8 /* Debug */,
-				9E13FDC61F8C8B9F00E7B2D8 /* Release */,
+				9E776DCF1F8EB3B000C84F2E /* Debug */,
+				9E776DD01F8EB3B000C84F2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
