@@ -24,9 +24,12 @@ class WeatherViewController: UIViewController {
     }
 
     func getWeather(for location: String) {
-        APIRequestManager.manager.getData(endPoint: "http://api.openweathermap.org/data/2.5/weather?q=\(location)&APPID=2f3672aee225fe4d6e25f0a1c81f655d") { (data) in
-            if let _ = data {
-                print("ok")
+        if let locationString = location.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) {
+            APIRequestManager.manager.getData(endPoint: "http://api.openweathermap.org/data/2.5/weather?q=\(locationString),us&APPID=2f3672aee225fe4d6e25f0a1c81f655d") { (data) in
+                if let data = data, let weather = Weather.getWeather(from: data) {
+                    self.weather = weather
+                    dump(weather)
+                }
             }
         }
     }

@@ -23,7 +23,8 @@ class APIRequestManager {
         customConfig.requestCachePolicy = .reloadIgnoringLocalCacheData
         customConfig.urlCache = nil
 
-        defaultSession.dataTask(with: myURL) { (data, _, error) in
+        let session = URLSession(configuration: .default)
+        session.dataTask(with: myURL) { (data, _, error) in
             if let error = error {
                 print("Error during dataTask session: \(error.localizedDescription)")
             }
