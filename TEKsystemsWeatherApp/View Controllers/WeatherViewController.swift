@@ -10,39 +10,52 @@ import UIKit
 
 class WeatherViewController: UIViewController {
     // MARK: Properties and Outlets
+    @IBOutlet weak var weatherImageView: UIImageView!
+    @IBOutlet weak var weatherConditionLabel: UILabel!
+    
     let userDefaults = UserDefaults.standard
     let segueIdentifier = "settingsSegue"
-
+    
     // Possible defaults
     var location = "Brooklyn, NY"
     var weather: Weather?
     var tempScale = TempScale.fahrenheit
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getWeather(for: location)
     }
+    
+    func updateWeather() {
+        if let weather = weather {
+            self.title = weather.cityName
+            self.weatherConditionLabel.text = weather.description
 
+        }
+    }
+    
     func getWeather(for location: String) {
         if let locationString = location.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) {
             APIRequestManager.manager.getData(endPoint: "http://api.openweathermap.org/data/2.5/weather?q=\(locationString),us&APPID=2f3672aee225fe4d6e25f0a1c81f655d") { (data) in
                 if let data = data, let weather = Weather.getWeather(from: data) {
                     self.weather = weather
-                    dump(weather)
+                    DispatchQueue.main.async {
+                        self.updateWeather()
+                    }
                 }
             }
         }
     }
-
+    
     // MARK: - Navigation
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segueIdentifier {
             let vc = segue.destination as! SettingsViewController
             vc.delegate = self
         }
     }
-
+    
 }
 
 extension WeatherViewController: SettingsDelegate {
@@ -51,7 +64,9 @@ extension WeatherViewController: SettingsDelegate {
             self.location = location
             getWeather(for: self.location)
         }
-
+        
         self.tempScale = scale
+
+        controller.dismiss(animated: true, completion: nil)
     }
 }
