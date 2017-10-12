@@ -52,7 +52,6 @@ class SettingsViewController: UIViewController {
         findLocation(locationManager, didUpdateLocations: locations)
     }
 
-
     @IBAction func tempScaleSegmentControlTapped(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             tempScale = .fahrenheit
@@ -68,6 +67,7 @@ class SettingsViewController: UIViewController {
     }
 }
 
+// MARK: - Extensions
 extension SettingsViewController: UITextFieldDelegate {
     // MARK: - UITextField Stuff
     func textFieldDidBeginEditing(_ textField: UITextField) {

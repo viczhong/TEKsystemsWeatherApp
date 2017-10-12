@@ -1,3 +1,9 @@
+//
+//
+// Note from Vic: grabbing this to make testing easier.
+//
+//
+
 /*
 Copyright (c) 2016 Dominik Hauser <dom@dasdom.de>
 
