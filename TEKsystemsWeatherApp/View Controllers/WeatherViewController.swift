@@ -27,14 +27,15 @@ class WeatherViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadDefaults()
         searchBar.delegate = self
+        loadDefaults()
         getWeather(for: location)
     }
 
     // MARK: Functions
     func convertWeather(from temp: Double, to tempScale: TempScale) -> Int {
         var temp = temp
+
         if tempScale == .celsius {
             temp -= 273.15
         } else {
@@ -52,9 +53,11 @@ class WeatherViewController: UIViewController {
             self.degreesLabel.text = "\(convertWeather(from: weather.temp, to: tempScale))°"
             self.tempScaleLabel.text = tempScale.rawValue
 
+            // In retrospect, we probably didn't need to use Kingfisher to cache these small images.
             let url = URL(string: "http://openweathermap.org/img/w/\(weather.icon).png")!
             weatherImageView.kf.setImage(with: url, placeholder: UIImage(named: "placeholder"))
 
+            // Loving Swift 4's new multi-line strings
             self.minMaxLabel.text = """
             Low: \(convertWeather(from: weather.min, to: tempScale))°
             High: \(convertWeather(from: weather.max, to: tempScale))°

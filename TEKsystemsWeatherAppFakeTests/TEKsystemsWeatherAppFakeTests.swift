@@ -46,7 +46,7 @@ class TEKsystemsWeatherAppFakeTests: XCTestCase {
 
         // when
         XCTAssertNil(weatherViewControllerUnderTest.weather, "This shouldn't be anything yet")
-        apiRequestManagerUnderTest.getData(endPoint: "queens") { data in
+        apiRequestManagerUnderTest.getData(endPoint: "queens") { (data, _) in
             if let data = data, let weather = Weather.getWeather(from: data) {
                 self.weatherViewControllerUnderTest.weather = weather
             }
