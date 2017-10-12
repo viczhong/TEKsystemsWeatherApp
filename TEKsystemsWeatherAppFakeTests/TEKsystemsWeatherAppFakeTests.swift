@@ -56,7 +56,12 @@ class TEKsystemsWeatherAppFakeTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
 
         // then
-        XCTAssertEqual(weatherViewControllerUnderTest.weather?.cityName, "New York", "Didn't parse correctly")
+        if let weather = weatherViewControllerUnderTest.weather {
+            XCTAssertEqual(weather.cityName, "New York", "Didn't parse correctly")
+            XCTAssertEqual(weatherViewControllerUnderTest.convertWeather(from: (weather.temp), to: TempScale.fahrenheit), 69, "Didn't convert correctly")
+        } else {
+            XCTFail("Weather couln't be unrwapped")
+        }
     }
     
 }
