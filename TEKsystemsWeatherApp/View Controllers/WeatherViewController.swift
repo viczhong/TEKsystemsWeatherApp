@@ -16,6 +16,7 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var degreesLabel: UILabel!
     @IBOutlet weak var tempScaleLabel: UILabel!
+    @IBOutlet weak var minMaxLabel: UILabel!
 
     let userDefaults = UserDefaults.standard
     let segueIdentifier = "settingsSegue"
@@ -52,6 +53,11 @@ class WeatherViewController: UIViewController {
 
             let url = URL(string: "http://openweathermap.org/img/w/\(weather.icon).png")!
             weatherImageView.kf.setImage(with: url, placeholder: UIImage(named: "placeholder"))
+
+            self.minMaxLabel.text = """
+            Low: \(convertWeather(from: weather.min, to: tempScale))°
+            High: \(convertWeather(from: weather.max, to: tempScale))°
+            """
         }
     }
     
