@@ -19,46 +19,84 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pls-4h-SdS">
-                                <rect key="frame" x="103.66666666666669" y="80" width="207" height="207.66666666666669"/>
+                            <searchBar contentMode="redraw" placeholder="New York, NY" translatesAutoresizingMaskIntoConstraints="NO" id="obm-Oh-eFG">
+                                <rect key="frame" x="0.0" y="64" width="414" height="56"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="pls-4h-SdS" secondAttribute="height" multiplier="1:1" id="PgY-Sd-flu"/>
+                                    <constraint firstAttribute="height" constant="56" id="bap-sT-MIe"/>
                                 </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Condition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fA0-Kl-FiP">
-                                <rect key="frame" x="8" y="295" width="398" height="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="uug-YU-gPh">
+                                <rect key="frame" x="124.33333333333334" y="138" width="165.66666666666666" height="129.33333333333331"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uug-YU-gPh" secondAttribute="height" multiplier="1:0.78" id="w3o-hq-yi9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="90"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tempScale" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zxF-wB-ti0">
+                                <rect key="frame" x="8" y="275.33333333333331" width="398" height="20.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2mB-vQ-evZ">
+                                <rect key="frame" x="20" y="343.66666666666669" width="374" height="50"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pls-4h-SdS">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="pls-4h-SdS" secondAttribute="height" multiplier="1:1" id="pAO-hd-Khl"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Weather Condition" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fA0-Kl-FiP">
+                                        <rect key="frame" x="50" y="0.0" width="324" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="pls-4h-SdS" firstAttribute="height" secondItem="fA0-Kl-FiP" secondAttribute="height" id="zkN-Yt-f5W"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fA0-Kl-FiP" firstAttribute="centerX" secondItem="pls-4h-SdS" secondAttribute="centerX" id="6kh-Ff-7ea"/>
-                            <constraint firstItem="pls-4h-SdS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="HVm-K7-flh"/>
-                            <constraint firstItem="pls-4h-SdS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="Hxh-ZG-RnR"/>
-                            <constraint firstItem="fA0-Kl-FiP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="NCQ-Zl-xys"/>
-                            <constraint firstItem="fA0-Kl-FiP" firstAttribute="top" secondItem="pls-4h-SdS" secondAttribute="bottom" constant="7.5" id="Y9K-kD-loi"/>
-                            <constraint firstItem="pls-4h-SdS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hTM-YN-9qM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fA0-Kl-FiP" secondAttribute="trailing" constant="8" id="zj7-MG-Wrp"/>
+                            <constraint firstItem="uug-YU-gPh" firstAttribute="top" secondItem="obm-Oh-eFG" secondAttribute="bottom" constant="18" id="BJH-df-8Xl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zxF-wB-ti0" secondAttribute="trailing" constant="8" id="D19-mE-CEU"/>
+                            <constraint firstItem="zxF-wB-ti0" firstAttribute="top" secondItem="uug-YU-gPh" secondAttribute="bottom" constant="8" id="DIv-hr-ZJq"/>
+                            <constraint firstItem="obm-Oh-eFG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HTr-UH-s6v"/>
+                            <constraint firstItem="2mB-vQ-evZ" firstAttribute="top" secondItem="zxF-wB-ti0" secondAttribute="bottom" constant="48" id="PyA-fk-tBL"/>
+                            <constraint firstItem="zxF-wB-ti0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Qaq-aF-QwJ"/>
+                            <constraint firstItem="uug-YU-gPh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VpU-C7-xjf"/>
+                            <constraint firstItem="obm-Oh-eFG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XO1-fo-P4u"/>
+                            <constraint firstItem="uug-YU-gPh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="Z1W-SA-lsB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2mB-vQ-evZ" secondAttribute="trailing" constant="20" id="a2n-sD-zVd"/>
+                            <constraint firstItem="obm-Oh-eFG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lLl-AN-WiI"/>
+                            <constraint firstItem="2mB-vQ-evZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sI2-Xc-ZCT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Q4I-B9-tgN">
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="zBz-NJ-8fb">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="settings" style="plain" id="zBz-NJ-8fb">
                             <connections>
                                 <segue destination="Cqr-UC-8pM" kind="presentation" identifier="settingsSegue" id="VFO-Ys-kQj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="degreesLabel" destination="uug-YU-gPh" id="Cqd-Yh-rbu"/>
+                        <outlet property="searchBar" destination="obm-Oh-eFG" id="SW3-X3-2iG"/>
+                        <outlet property="tempScaleLabel" destination="zxF-wB-ti0" id="Q8a-m8-12f"/>
                         <outlet property="weatherConditionLabel" destination="fA0-Kl-FiP" id="PSP-o7-kny"/>
                         <outlet property="weatherImageView" destination="pls-4h-SdS" id="8Vy-45-4Df"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="456.80000000000001" y="118.29085457271366"/>
+            <point key="canvasLocation" x="455.07246376811599" y="117.39130434782609"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="fcO-I6-FaT">
@@ -159,4 +197,7 @@
             <point key="canvasLocation" x="-316" y="118"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="settings" width="22" height="22"/>
+    </resources>
 </document>
