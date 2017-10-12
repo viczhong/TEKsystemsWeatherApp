@@ -20,8 +20,7 @@ class WeatherViewController: UIViewController {
 
     let userDefaults = UserDefaults.standard
     let segueIdentifier = "settingsSegue"
-    
-    // Possible defaults
+
     var location = "Brooklyn, NY"
     var weather: Weather?
     var tempScale = TempScale.fahrenheit
@@ -33,6 +32,7 @@ class WeatherViewController: UIViewController {
         getWeather(for: location)
     }
 
+    // MARK: Functions
     func convertWeather(from temp: Double, to tempScale: TempScale) -> Int {
         var temp = temp
         if tempScale == .celsius {
@@ -78,15 +78,26 @@ class WeatherViewController: UIViewController {
     
     func getWeather(for location: String) {
         if let locationString = location.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) {
-            APIRequestManager.manager.getData(endPoint: "http://api.openweathermap.org/data/2.5/weather?q=\(locationString),us&APPID=2f3672aee225fe4d6e25f0a1c81f655d") { (data) in
+            APIRequestManager.manager.getData(endPoint: "http://api.openweathermap.org/data/2.5/weather?q=\(locationString),us&APPID=2f3672aee225fe4d6e25f0a1c81f655d", callback: {(data, error) in
+
+                if let _ = error {
+                    self.connectionFailed()
+                }
+
                 if let data = data, let weather = Weather.getWeather(from: data) {
                     self.weather = weather
                     DispatchQueue.main.async {
                         self.updateWeather()
                     }
                 }
-            }
+            })
         }
+    }
+
+    func connectionFailed() {
+        let alertController = UIAlertController(title: "Error", message: "Cannot get weather!", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
     }
     
     // MARK: - Navigation
@@ -100,6 +111,7 @@ class WeatherViewController: UIViewController {
     }
 }
 
+// MARK: - Extensions
 extension WeatherViewController: SettingsDelegate {
     func changeSettings(_ controller: SettingsViewController, _ location: String, _ scale: TempScale) {
         if self.location != location {

@@ -16,7 +16,7 @@ class APIRequestManager {
     // defaultSession conforms to DHURLSession protocol for FakeTests
     var defaultSession: DHURLSession = URLSession(configuration: .default)
 
-    func getData(endPoint: String, callback: @escaping (Data?) -> Void) {
+    func getData(endPoint: String, callback: @escaping (Data?, Error?) -> Void) {
         guard let myURL = URL(string: endPoint) else { return }
 
         let customConfig = URLSessionConfiguration.default
@@ -27,7 +27,7 @@ class APIRequestManager {
             if let error = error {
                 print("Error during dataTask session: \(error.localizedDescription)")
             }
-            callback(data)
+            callback(data, error)
             }.resume()
     }
 }
