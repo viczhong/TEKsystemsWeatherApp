@@ -17,3 +17,7 @@ Run `pod install` in the directory to download the Kingfisher Cocoapod. Then ope
 Main Screen|Settings
 ---|---
 ![screenshot](AppScreens/mainview.png)|![screenshot](AppScreens/settingsview.png)
+
+|Rotated View|
+|---|
+|![screenshot](AppScreens/mainviewrotated.png)|
