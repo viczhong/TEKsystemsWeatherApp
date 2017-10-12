@@ -21,6 +21,7 @@ class TEKsystemsWeatherAppUITests: XCTestCase {
     }
     
     override func tearDown() {
+        app = nil
         super.tearDown()
     }
 

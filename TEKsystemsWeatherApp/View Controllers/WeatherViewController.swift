@@ -27,14 +27,15 @@ class WeatherViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadDefaults()
         searchBar.delegate = self
-        getWeather(for: location)
+        loadDefaults()
+        getWeather(location)
     }
 
     // MARK: Functions
     func convertWeather(from temp: Double, to tempScale: TempScale) -> Int {
         var temp = temp
+
         if tempScale == .celsius {
             temp -= 273.15
         } else {
@@ -44,22 +45,26 @@ class WeatherViewController: UIViewController {
         return Int(temp)
     }
 
-    func updateWeather() {
+    func updateWeatherView() {
         if let weather = weather {
             self.title = weather.cityName
             self.location = weather.cityName
-            self.weatherConditionLabel.text = weather.description
             self.degreesLabel.text = "\(convertWeather(from: weather.temp, to: tempScale))°"
             self.tempScaleLabel.text = tempScale.rawValue
 
-            let url = URL(string: "http://openweathermap.org/img/w/\(weather.icon).png")!
-            weatherImageView.kf.setImage(with: url, placeholder: UIImage(named: "placeholder"))
+            // Loving Swift 4's new multi-line strings
+            self.weatherConditionLabel.text = """
+            Right now, we've got \(weather.description).
 
-            self.minMaxLabel.text = """
             Low: \(convertWeather(from: weather.min, to: tempScale))°
             High: \(convertWeather(from: weather.max, to: tempScale))°
             """
 
+            // In retrospect, we probably didn't need to use Kingfisher to cache these small images.
+            let url = URL(string: "http://openweathermap.org/img/w/\(weather.icon).png")!
+            weatherImageView.kf.setImage(with: url, placeholder: UIImage(named: "placeholder"))
+
+            // For retrival next time the app starts
             userDefaults.set(weather.cityName, forKey: "location")
         }
     }
@@ -76,7 +81,7 @@ class WeatherViewController: UIViewController {
         }
     }
     
-    func getWeather(for location: String) {
+    func getWeather(_ location: String) {
         if let locationString = location.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) {
             APIRequestManager.manager.getData(endPoint: "http://api.openweathermap.org/data/2.5/weather?q=\(locationString),us&APPID=2f3672aee225fe4d6e25f0a1c81f655d", callback: {(data, error) in
 
@@ -87,7 +92,7 @@ class WeatherViewController: UIViewController {
                 if let data = data, let weather = Weather.getWeather(from: data) {
                     self.weather = weather
                     DispatchQueue.main.async {
-                        self.updateWeather()
+                        self.updateWeatherView()
                     }
                 }
             })
@@ -112,16 +117,17 @@ class WeatherViewController: UIViewController {
 }
 
 // MARK: - Extensions
+// I prefer just prefer delegation over notification
 extension WeatherViewController: SettingsDelegate {
     func changeSettings(_ controller: SettingsViewController, _ location: String, _ scale: TempScale) {
         if self.location != location {
             self.location = location
-            getWeather(for: self.location)
+            getWeather(self.location)
         }
         
         if self.tempScale != scale {
             self.tempScale = scale
-            updateWeather()
+            updateWeatherView()
             userDefaults.set(scale.rawValue, forKey: "tempScale")
         }
 
@@ -131,8 +137,8 @@ extension WeatherViewController: SettingsDelegate {
 
 extension WeatherViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        if let search = searchBar.text {
-            getWeather(for: search)
+        if let searchLocation = searchBar.text {
+            getWeather(searchLocation)
         }
 
         searchBar.text = ""

@@ -52,7 +52,6 @@ class SettingsViewController: UIViewController {
         findLocation(locationManager, didUpdateLocations: locations)
     }
 
-
     @IBAction func tempScaleSegmentControlTapped(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             tempScale = .fahrenheit
@@ -68,6 +67,7 @@ class SettingsViewController: UIViewController {
     }
 }
 
+// MARK: - Extensions
 extension SettingsViewController: UITextFieldDelegate {
     // MARK: - UITextField Stuff
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -96,11 +96,12 @@ extension SettingsViewController: CLLocationManagerDelegate {
     }
 
     func findLocation(_ manager: CLLocationManager, didUpdateLocations location: [CLLocation]) {
-
         if let location = manager.location {
             CLGeocoder().reverseGeocodeLocation(location, completionHandler: { (placemarks, error) in
                 if let placemarks = placemarks {
                     if placemarks.count > 0 {
+
+                        // Given more time, I would've gone with city names instead of zip codes.
                         if let pm = placemarks[0].postalCode {
                             self.locationTextField.text = pm
                             self.locationString = pm
