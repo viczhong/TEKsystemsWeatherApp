@@ -20,8 +20,7 @@ class WeatherViewController: UIViewController {
 
     let userDefaults = UserDefaults.standard
     let segueIdentifier = "settingsSegue"
-    
-    // Possible defaults
+
     var location = "Brooklyn, NY"
     var weather: Weather?
     var tempScale = TempScale.fahrenheit
@@ -33,6 +32,7 @@ class WeatherViewController: UIViewController {
         getWeather(for: location)
     }
 
+    // MARK: Functions
     func convertWeather(from temp: Double, to tempScale: TempScale) -> Int {
         var temp = temp
         if tempScale == .celsius {
@@ -100,6 +100,7 @@ class WeatherViewController: UIViewController {
     }
 }
 
+// MARK: - Extensions
 extension WeatherViewController: SettingsDelegate {
     func changeSettings(_ controller: SettingsViewController, _ location: String, _ scale: TempScale) {
         if self.location != location {
