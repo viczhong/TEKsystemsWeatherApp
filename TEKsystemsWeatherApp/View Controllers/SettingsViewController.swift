@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 protocol  SettingsDelegate {
     func changeSettings(_ controller: SettingsViewController, _ location: String, _ scale: TempScale)
@@ -26,13 +27,17 @@ class SettingsViewController: UIViewController {
     var delegate: SettingsDelegate!
     var locationString: String!
     var tempScale: TempScale!
-
+    let locationManager = CLLocationManager()
+    var locations = [CLLocation]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         locationTextField.delegate = self
         setupOutlets()
+        startCheckingLocation(locationManager)
     }
 
+    // MARK: - Functions
     func setupOutlets() {
         locationTextField.text = locationString
         tempScaleTextLabel.text = "Temperature Scale: \(tempScale.rawValue)"
@@ -42,6 +47,11 @@ class SettingsViewController: UIViewController {
             tempScaleSegmentControl.selectedSegmentIndex = 1
         }
     }
+
+    @IBAction func detectLocationButtonTapped(_ sender: Any) {
+        findLocation(locationManager, didUpdateLocations: locations)
+    }
+
 
     @IBAction func tempScaleSegmentControlTapped(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
@@ -73,3 +83,43 @@ extension SettingsViewController: UITextFieldDelegate {
         return true
     }
 }
+
+extension SettingsViewController: CLLocationManagerDelegate {
+    func startCheckingLocation(_ locationManager: CLLocationManager) {
+        locationManager.requestWhenInUseAuthorization()
+
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+    }
+
+    func findLocation(_ manager: CLLocationManager, didUpdateLocations location: [CLLocation]) {
+
+        if let location = manager.location {
+            CLGeocoder().reverseGeocodeLocation(location, completionHandler: { (placemarks, error) in
+                if let placemarks = placemarks {
+                    if placemarks.count > 0 {
+                        if let pm = placemarks[0].postalCode {
+                            self.locationTextField.text = pm
+                            self.locationString = pm
+                        }
+                    }
+
+                    manager.stopUpdatingLocation()
+                }
+
+                if let error = error {
+                    print("Error during location session: \(error.localizedDescription)")
+                    return
+                }
+            })
+        } else {
+            let alertController = UIAlertController(title: "Error", message: "Please Enable Location Services for TEKsystems Weather in Settings", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+}
+
