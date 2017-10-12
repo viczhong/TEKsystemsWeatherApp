@@ -13,7 +13,10 @@ class WeatherViewController: UIViewController {
     // MARK: Properties and Outlets
     @IBOutlet weak var weatherImageView: UIImageView!
     @IBOutlet weak var weatherConditionLabel: UILabel!
-    
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var degreesLabel: UILabel!
+    @IBOutlet weak var tempScaleLabel: UILabel!
+
     let userDefaults = UserDefaults.standard
     let segueIdentifier = "settingsSegue"
     
@@ -24,14 +27,28 @@ class WeatherViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.delegate = self
         getWeather(for: location)
     }
-    
+
+    func convertWeather(from temp: Double, to tempScale: TempScale) -> Int {
+        var temp = temp
+        if tempScale == .celsius {
+            temp -= 273.15
+        } else {
+            temp = temp * 9/5 - 459.67
+        }
+
+        return Int(temp)
+    }
+
     func updateWeather() {
         if let weather = weather {
             self.title = weather.cityName
             self.location = weather.cityName
             self.weatherConditionLabel.text = weather.description
+            self.degreesLabel.text = "\(convertWeather(from: weather.temp, to: tempScale))°"
+            self.tempScaleLabel.text = tempScale.rawValue
 
             let url = URL(string: "http://openweathermap.org/img/w/\(weather.icon).png")!
             weatherImageView.kf.setImage(with: url, placeholder: UIImage(named: "placeholder"))
@@ -60,7 +77,6 @@ class WeatherViewController: UIViewController {
             vc.tempScale = tempScale
         }
     }
-    
 }
 
 extension WeatherViewController: SettingsDelegate {
@@ -70,8 +86,22 @@ extension WeatherViewController: SettingsDelegate {
             getWeather(for: self.location)
         }
         
-        self.tempScale = scale
+        if self.tempScale != scale {
+            self.tempScale = scale
+            updateWeather()
+        }
 
         controller.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension WeatherViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let search = searchBar.text {
+            getWeather(for: search)
+        }
+
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
     }
 }
