@@ -28,6 +28,7 @@ class WeatherViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadDefaults()
         searchBar.delegate = self
         getWeather(for: location)
     }
@@ -58,6 +59,20 @@ class WeatherViewController: UIViewController {
             Low: \(convertWeather(from: weather.min, to: tempScale))°
             High: \(convertWeather(from: weather.max, to: tempScale))°
             """
+
+            userDefaults.set(weather.cityName, forKey: "location")
+        }
+    }
+
+    func loadDefaults() {
+        if let defaultLocation = userDefaults.string(forKey: "location") {
+            location = defaultLocation
+        }
+
+        if let previousTempScale = userDefaults.string(forKey: "tempScale") {
+            if previousTempScale == TempScale.celsius.rawValue {
+                tempScale = .celsius
+            }
         }
     }
     
@@ -95,6 +110,7 @@ extension WeatherViewController: SettingsDelegate {
         if self.tempScale != scale {
             self.tempScale = scale
             updateWeather()
+            userDefaults.set(scale.rawValue, forKey: "tempScale")
         }
 
         controller.dismiss(animated: true, completion: nil)
