@@ -152,8 +152,8 @@
 		9E13FDC81F8C8FC000E7B2D8 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9E776DD11F8EB9F300C84F2E /* WeatherViewController.swift */,
 				9E776DD31F8EBA1F00C84F2E /* SettingsViewController.swift */,
+				9E776DD11F8EB9F300C84F2E /* WeatherViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
