@@ -18,6 +18,6 @@ Main Screen|Settings
 ---|---
 ![screenshot](AppScreens/mainview.png)|![screenshot](AppScreens/settingsview.png)
 
-Rotated View
----
-![screenshot](AppScreens/mainviewrotated.png)
+|Rotated View|
+|---|
+|![screenshot](AppScreens/mainviewrotated.png)|
