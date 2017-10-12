@@ -62,7 +62,7 @@ class TEKsystemsWeatherAppUITests: XCTestCase {
         }
 
         // check to see if location text field is updated with previous input
-        let settingsLocationTextField = app.textFields["New York, NY"]
+        let settingsLocationTextField = app.textFields["City, State, and/or Zip Code"]
         XCTAssertEqual(settingsLocationTextField.value as! String, "Newark")
 
         settingsLocationTextField.tap()

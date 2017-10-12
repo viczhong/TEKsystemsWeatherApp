@@ -52,7 +52,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="uug-YU-gPh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="uug-YU-gPh">
                                 <rect key="frame" x="125" y="138" width="165.66666666666669" height="129.33333333333331"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uug-YU-gPh" secondAttribute="height" multiplier="1:0.78" id="w3o-hq-yi9"/>
@@ -118,7 +118,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New York, NY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Arh-wE-9Gw">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City, State, and/or Zip Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Arh-wE-9Gw">
                                 <rect key="frame" x="62" y="170" width="290" height="30"/>
                                 <accessibility key="accessibilityConfiguration" label="location label"/>
                                 <nil key="textColor"/>
@@ -126,13 +126,13 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature Scale" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tf7-rg-VMX">
-                                <rect key="frame" x="8" y="280" width="398" height="21"/>
+                                <rect key="frame" x="8" y="302" width="398" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="P5p-ui-hJ3">
-                                <rect key="frame" x="128.66666666666669" y="316.66666666666669" width="157.00000000000006" height="29"/>
+                                <rect key="frame" x="128.66666666666669" y="338.66666666666669" width="157.00000000000006" height="29"/>
                                 <segments>
                                     <segment title="Fahrenheit"/>
                                     <segment title="Celcius"/>
@@ -154,18 +154,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wd7-Cp-R8d">
+                                <rect key="frame" x="153" y="208" width="109" height="30"/>
+                                <state key="normal" title="Detect Location"/>
+                                <connections>
+                                    <action selector="detectLocationButtonTapped:" destination="Cqr-UC-8pM" eventType="touchUpInside" id="dlC-Mf-hNq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="IpI-rw-LzG" firstAttribute="trailing" secondItem="Tf7-rg-VMX" secondAttribute="trailing" constant="8" id="3XN-7X-MT4"/>
                             <constraint firstItem="fuZ-lZ-raU" firstAttribute="top" secondItem="K0J-fW-mt5" secondAttribute="bottom" constant="64" id="5p2-zD-IFt"/>
-                            <constraint firstItem="Tf7-rg-VMX" firstAttribute="top" secondItem="Arh-wE-9Gw" secondAttribute="bottom" constant="80" id="7KH-b5-dqq"/>
                             <constraint firstItem="Arh-wE-9Gw" firstAttribute="centerX" secondItem="KbM-a4-f3v" secondAttribute="centerX" id="BaY-SS-gc2"/>
                             <constraint firstItem="K0J-fW-mt5" firstAttribute="centerX" secondItem="KbM-a4-f3v" secondAttribute="centerX" id="FKo-GL-ynh"/>
                             <constraint firstItem="P5p-ui-hJ3" firstAttribute="top" secondItem="Tf7-rg-VMX" secondAttribute="bottom" constant="16" id="TVR-e0-7Hx"/>
                             <constraint firstItem="K0J-fW-mt5" firstAttribute="top" secondItem="IpI-rw-LzG" secondAttribute="top" constant="16" id="U71-9d-jSG"/>
+                            <constraint firstItem="Tf7-rg-VMX" firstAttribute="top" secondItem="wd7-Cp-R8d" secondAttribute="bottom" constant="64" id="V4l-RO-PKC"/>
+                            <constraint firstItem="wd7-Cp-R8d" firstAttribute="top" secondItem="Arh-wE-9Gw" secondAttribute="bottom" constant="8" id="XA6-Pc-org"/>
                             <constraint firstItem="fuZ-lZ-raU" firstAttribute="leading" secondItem="IpI-rw-LzG" secondAttribute="leading" constant="8" id="YWW-W3-45H"/>
                             <constraint firstItem="P5p-ui-hJ3" firstAttribute="centerX" secondItem="KbM-a4-f3v" secondAttribute="centerX" id="bFN-Pm-3NX"/>
+                            <constraint firstItem="wd7-Cp-R8d" firstAttribute="centerX" secondItem="KbM-a4-f3v" secondAttribute="centerX" id="cpJ-4T-6CK"/>
                             <constraint firstItem="IpI-rw-LzG" firstAttribute="bottom" secondItem="8Nq-hh-0ts" secondAttribute="bottom" constant="100" id="fbU-7Z-XzD"/>
                             <constraint firstItem="8Nq-hh-0ts" firstAttribute="centerX" secondItem="KbM-a4-f3v" secondAttribute="centerX" id="jAc-4l-jTE"/>
                             <constraint firstItem="Arh-wE-9Gw" firstAttribute="top" secondItem="fuZ-lZ-raU" secondAttribute="bottom" constant="16" id="kNU-wm-3Gp"/>
