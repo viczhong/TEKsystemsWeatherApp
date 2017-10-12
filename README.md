@@ -13,6 +13,7 @@ Run `pod install` in the directory to download the Kingfisher Cocoapod. Then ope
 - Unit Tests
 - UI Test
 - Location Detection
+- Adaptive AutoLayout
 
 Main Screen|Settings
 ---|---
