@@ -31,11 +31,12 @@ class TEKsystemsWeatherAppNetworkingTests: XCTestCase {
         var responseError: Error?
         
         // when
-        let dataTask = sessionUnderTest.dataTask(with: url!) { data, response, error in
+        let dataTask = sessionUnderTest.dataTask(with: url!) { (_, response, error) in
             statusCode = (response as? HTTPURLResponse)?.statusCode
             responseError = error
             promise.fulfill()
         }
+
         dataTask.resume()
         waitForExpectations(timeout: 5, handler: nil)
         
