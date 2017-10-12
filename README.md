@@ -1,4 +1,5 @@
-# TEKsystemsWeatherApp
+# TEKsystemsWeatherApp Code Challenge
+## By Victor Zhong
 
 ### To run
 Run `pod install` in the directory to download the Kingfisher Cocoapod. Then open the newly created `TEKsystemsWeatherApp.xcworkspace` file and compile and run. 
